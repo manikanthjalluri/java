@@ -1,0 +1,75 @@
+import java.io.*;
+import java.util.*;
+class Salary
+{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        double bs;
+        double ns;
+        double hra,da,ta,ma,sa,pt,epf,tax;
+        System.out.println("enter basic salary");
+        bs=s.nextInt();
+        if(bs>=30000&&bs>=100000)
+        {
+            da=bs*10/100;
+            hra=bs*50/100;
+            ta=bs*8/100;
+            ma=bs*11/100;
+            pt=bs*5/100;
+            tax=bs*25/100;
+            ns=bs+da+hra+ta+ma-pt-tax;
+            System.out.println("the total set salary"+ns);
+        }
+         else if(bs>=100000&&bs>=200000)
+        {
+            da=bs*10/100;
+            hra=bs*50/100;
+            ta=bs*8/100;
+            ma=bs*11/100;
+            pt=bs*5/100;
+            tax=bs*25/100;
+            ns=bs+da+hra+ta+ma-pt-tax;
+            System.out.println("the total set salary"+ns);
+        }
+         else if(bs>=20000&&bs>=300000)
+        {
+            da=bs*10/100;
+            hra=bs*50/100;
+            ta=bs*8/100;
+            ma=bs*11/100;
+            pt=bs*5/100;
+            tax=bs*25/100;
+            ns=bs+da+hra+ta+ma-pt-tax;
+            System.out.println("the total set salary"+ns);
+        }
+         else if(bs>=30000&&bs>=500000)
+        {
+            da=bs*10/100;
+            hra=bs*50/100;
+            ta=bs*8/100;
+            ma=bs*11/100;
+            pt=bs*5/100;
+            tax=bs*25/100;
+            ns=bs+da+hra+ta+ma-pt-tax;
+            System.out.println("the total set salary"+ns);
+        }
+        else
+        {
+          da=bs*10/100;
+            hra=bs*50/100;
+            ta=bs*8/100;
+            ma=bs*11/100;
+            pt=bs*5/100;
+            tax=bs*25/100;
+            ns=bs+da+hra+ta+ma-pt-tax;
+            System.out.println("the total set salary"+ns);  
+        }
+    }
+}
+
+
+
+
+
+
