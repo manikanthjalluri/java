@@ -1,0 +1,64 @@
+import java.io.*;
+import java.util.*;
+
+class Cbill {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int cr, pr, nu;
+        double bill;
+        double uc;
+
+        System.out.println("Enter current reading:");
+        cr = s.nextInt();
+        System.out.println("Enter previous reading:");
+        pr = s.nextInt();
+
+        nu = cr - pr;
+
+        if (nu < 0) 
+        {
+            System.out.println("Error: Current reading cannot be less than previous reading.");
+        }
+        else if (nu == 0) 
+        
+        {
+            bill = 120;
+            System.out.println("Minimum amount is: " + bill);
+        }
+        else 
+        {
+            // Determine the unit cost based on the number of units
+            if (nu > 0 && nu < 100) 
+            {
+                uc = 1.5;
+            } else if (nu >= 100 && nu < 500) 
+            {
+                uc = 3.5;
+            } else if (nu >= 500 && nu < 1000) 
+            {
+                uc = 5.5;
+            } 
+            else if (nu >= 1000 && nu < 2000)
+            {
+                uc = 15.5;
+            } 
+            else 
+            {
+                uc = 20.5;
+            }
+
+            
+            bill = uc * nu;
+
+            System.out.println("Current reading = " + cr);
+            System.out.println("Previous reading = " + pr);
+            System.out.println("Units consumed = " + nu);
+            System.out.println("Unit cost = " + uc);
+            System.out.println("Current bill = " + bill);
+        }
+
+       
+    }
+}
+
+
