@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+class Tangle
+{
+    public static void main(String[]args)
+    {
+        Double a,b,c;
+        Double s;
+        Double area;
+        Scanner r = new Scanner(System.in);
+        System.out.println("enter a value");
+        a=r.nextDouble();
+        System.out.println("enter b value");
+        b=r.nextDouble();
+        System.out.println("enter c value");
+        c=r.nextDouble();
+        s=(a+b+c)/2;
+        System.out.println(s);
+        area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        System.out.println(area);
+        
+        
+    }
+
+}
