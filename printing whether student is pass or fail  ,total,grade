@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+class Student
+{
+    public static void main(String[]args)
+    {
+        float tel,hin ,eng,mat,sci,soc,total,avg;
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter telugu marks");
+        tel=s.nextInt();
+        System.out.println("enter hindi marks");
+        hin=s.nextInt();
+        System.out.println("enter english marks");
+        eng=s.nextInt();
+        System.out.println("enter maths marks");
+        mat=s.nextInt();
+        System.out.println("enter science marks");
+        sci=s.nextInt();
+        System.out.println("enter social marks");
+        soc=s.nextInt();
+        total=tel+hin+eng+mat+sci+soc;
+        avg=total/6;
+        System.out.println(total);
+        System.out.println(avg);
+        if(tel>=35&&hin>=35&&eng>=35&&mat>=35&&sci>=35&&soc>=35)
+        System.out.println("pass");
+        else 
+        System.out.println("fail");
+        if(avg>=95)
+        System.out.println("grade A");
+        else if(avg>=85)
+        System.out.println("grade B");
+        else if(avg>=75)
+        System.out.println("grade C");
+        else if(avg>=65)
+        System.out.println("grade D");
+        else
+        System.out.println("grade E");
+    }
+}
