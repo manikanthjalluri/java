@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+class  Fib
+{
+    public static void main(String[]args)
+    {
+     int n,t1,t2,t3,i;
+     Scanner c=new Scanner(System.in);
+     System.out.println("enter n value");
+     n=c.nextInt();
+     t1=0;t2=1;i=1;
+     System.out.println(t1);
+     System.out.println(t2);
+     while(i<=n)
+     {
+         t3=t1+t2;
+         System.out.println(t3+" ");
+         t1=t2;
+         t2=t3;
+         i++;
+    }
+    }
+}
