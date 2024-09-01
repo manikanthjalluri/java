@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+class Armstrong
+{
+    public static void main(String[]args)
+    {
+        int n,m,arm,r;
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter n value");
+        n=s.nextInt();
+        m=n;
+        arm=0;
+        
+        while(n>0)
+        {
+            r=n%10;
+            arm=arm+(r*r*r);
+            n=n/10;
+            
+        }
+        if(m==arm)
+        System.out.println("armstrong");
+        else
+        System.out.println("not armstrong");
+        
+    }
+}
