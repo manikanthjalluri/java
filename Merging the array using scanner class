@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+class Merge
+{
+    public static void main(String[]args)
+    {
+        int i;
+        Scanner s=new Scanner(System.in);
+        
+        int a[]=new int[5];
+        int b[]=new int[5];
+        int c[]=new int[10];
+         System.out.println("enter size of n");
+         
+         for(i=0;i<5;i++)
+         {
+             a[i]=s.nextInt();
+         }
+         for(i=0;i<5;i++)
+         {
+             System.out.print(a[i]+" ");
+         }
+         System.out.println("/nenter size of m");
+         
+         for(i=0;i<5;i++)
+         {
+             b[i]=s.nextInt();
+         }
+         for(i=0;i<5;i++)
+         {
+             System.out.println(b[i]+" ");
+         }
+         for(i=0;i<5;i++)
+         {
+             c[i]=a[i];
+         }
+         for(i=0;i<5;i++)
+         {
+             c[i+5]=b[i];
+         }
+        
+        for(i=0;i<c.length;i++)
+        {
+            System.out.print(c[i]+"  ");
+        }
+        
+        
+    }
+}
