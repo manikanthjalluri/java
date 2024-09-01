@@ -1,0 +1,39 @@
+//SEARCHING AN ELEMENT BY USING ARRAY
+import java.io.*;
+import java.util.*;
+class Searcharray
+{
+    public static void main(String[]args)
+    {
+        int n,i,key;
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter n value");
+        n=s.nextInt();
+        int x[]=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            x[i]=s.nextInt();
+        }
+        System.out.println("array elements");
+        for(i=0;i<n;i++)
+        {
+            System.out.println(x[i]+" ");
+        }
+       int flag=0;
+       System.out.println("enter search value");
+       key=s.nextInt();
+       for(i=0;i<n;i++)
+       {
+           if(x[i]==key)
+           {
+               flag=1;
+               break;
+           }
+       }
+       if(flag==1)
+       System.out.println("search is sucess");
+       else
+       System.out.println("search is unsucess");
+    }
+    }
