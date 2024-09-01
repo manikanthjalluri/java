@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+class Insert
+{
+    public static void main(String[]args)
+    {
+        int n,pos,item,i;
+        Scanner s=new Scanner(System.in);
+        int x[]=new int[10];
+        System.out.println("enter array size");
+        n=s.nextInt();
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            x[i]=s.nextInt();
+        }
+        System.out.println("the array values are");
+        for(i=0;i<n;i++)
+        {
+            System.out.println(x[i]+" ");
+        }
+        System.out.println("enter the position to be inserted");
+        pos=s.nextInt();
+        System.out.println("enter item to be inserted");
+        item=s.nextInt();
+        for(i=n;i>pos;i--)
+        {
+            x[i]=x[i-1];
+        }
+        x[pos]=item;
+        n=n+1;
+        System.out.println("after inserting elements");
+        for(i=0;i<n;i++)
+        {
+            System.out.println(x[i]+" ");
+        }
+        
+    }
+}
