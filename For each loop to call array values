@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+class Foreach
+{
+    public static void main(String[]args)
+    {
+        int ar[]={1,2,3,4};
+        int i;
+        System.out.println("for each loop");
+        for(int c:ar)
+        {
+            System.out.println(c+" ");
+        }
+    }
+}
