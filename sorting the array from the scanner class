@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+class Sorting
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        int n,i,j,temp;
+        System.out.println("enter array size");
+        n=s.nextInt();
+        int x[]=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            x[i]=s.nextInt();
+        }
+        System.out.println("the elements are");
+        for(i=0;i<n;i++)
+        {
+            System.out.println(x[i]);
+        }
+        for(i=0;i<n;i++)
+        {
+            for(j=i+1;j<n;j++)
+            {
+                if(x[i]>x[j])
+                {
+                    temp=x[i];
+                    x[i]=x[j];
+                    x[j]=temp;
+                }
+            }
+        }
+        System.out.println("after swapping");
+        for(i=0;i<x.length;i++)
+        {
+            System.out.print(x[i]+"  ");
+        }
+    }
+}
