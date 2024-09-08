@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+class Smani
+{
+    public static void main(String[] args)
+    {
+        String S1="paragna";
+        String s2="COMPUTER";
+        System.out.println("upper case s1="+S1.toUpperCase());
+        System.out.println("lower case s2="+s2.toLowerCase());
+        String s3=S1.concat(s2);
+        System.out.println("concation of two Strins="+s3);
+        System.out.println("string length="+s3.length());
+        System.out.println("char at="+S1.charAt(4));
+        String s4=S1.replace('p','z');
+        System.out.println("the repalcing string="+s4);
+        int z= s2.indexOf('R');
+        System.out.println("The index of r in s2 = " + z);
+        System.out.println(S1.compareTo(s2));
+    }
+}
