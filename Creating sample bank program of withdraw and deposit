@@ -1,0 +1,61 @@
+import java.io.*;
+import java.util.*;
+class Bank
+{
+    public String accountnumber;
+    public double balance;
+    Bank(String accountnumber,double balance)
+    {
+        this.accountnumber=accountnumber;
+        this.balance=balance;
+    }
+    void deposit(double amount)
+    {
+        if(amount>0)
+        {
+            balance+=amount;
+            System.out.println("deposit amount"+amount  +   balance);
+        }
+        else
+        {
+            System.out.println("the deposit must be positive");
+        }
+    }
+}
+class Maccount extends Bank
+{
+    Maccount(String accountnumber,double balance)
+    {
+        super(accountnumber,balance);
+    }
+    void withdraw(double amount)
+    {
+        if(amount>0)
+        {
+            if(amount<=balance)
+            {
+                balance-=amount;
+                System.out.println("with draw amount"+amount  +  balance);
+            }
+            else
+            {
+                System.out.println("insufficient balance");
+            }
+        }
+        else
+        {
+            System.out.println("the withdraw amount must be positive");
+        }
+    }
+}
+public class Bdemo
+{
+    public static void main(String[] args)
+    {
+        Maccount z=new Maccount("1234",1000);
+        z.deposit(500);
+        z.withdraw(200);
+        System.out.println(z.balance);
+        System.out.println(z.accountnumber);
+    }
+}
