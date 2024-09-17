@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+class Earray
+{
+    public static void main(String[] args)
+    {
+        Scanner z=new Scanner(System.in);
+        int n,i;
+        System.out.println("enter the n value");
+        n=z.nextInt();
+        int x[]=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            x[i]=z.nextInt();
+        }
+        System.out.println("the array elements are");
+        for(i=0;i<n;i++)
+        {
+        System.out.print(x[i]+"  ");
+        }
+        System.out.println("\n the even array elements");
+        for(i=0;i<n;i=i+2)
+        {
+            System.out.println(x[i]+" ");
+        }
+    }
+}
