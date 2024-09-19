@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+class zarray
+{
+    public static void main(String[] args)
+    {
+        Scanner z=new Scanner(System.in);
+        int i,n;
+        System.out.println("enter n value");
+        n=z.nextInt();
+        int x[]=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            x[i]=z.nextInt();
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            if(x[i]%2==0)
+            {
+              System.out.print("?  ");
+            }
+            else
+            {
+                System.out.print(x[i]+"  ");
+            }
+            
+        }
+    }
+}
