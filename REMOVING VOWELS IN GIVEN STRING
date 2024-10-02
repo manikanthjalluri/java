@@ -1,0 +1,22 @@
+import java .io.*;
+import java.util.*;
+class Remove
+{
+    public static void main(String[] args)
+    {
+        Scanner z= new Scanner(System.in);
+        String x;
+        x=z.nextLine();
+        String y=" ";
+        for(int i=0;i<x.length();i++)
+        {
+            char mchar=x.charAt(i);
+            if(mchar !='a'&& mchar!='e'&& mchar!='i'&& mchar!='o'&& mchar!='u')
+            {
+                y=y+mchar;
+            }
+            }
+        System.out.println(y);
+    }
+    
+}
