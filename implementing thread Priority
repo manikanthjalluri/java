@@ -1,0 +1,64 @@
+import java.io.*;
+import java.lang.*;
+class A implements Runnable
+{
+    public void run()
+    {
+        int i;
+        for(i=1;i<=5;i++)
+        {
+            System.out.println("from thread A"+i);
+        }
+        System.out.println("exit from thread a");
+    }
+    
+}
+class B implements Runnable
+{
+    public void run()
+    {
+    int j;
+    for(j=1;j<=5;j++)
+    {
+        System.out.println("from thread b"+j);
+    }
+    System.out.println("exit form thread B");
+    }
+}
+class C implements Runnable
+{
+    public void run()
+    {
+        int k;
+        for(k=1;k<=5;k++)
+        {
+            System.out.println("from thread c"+k);
+        }
+        System.out.println("exit thread c");
+    }
+}
+public class Rdemo
+{
+    public static void main(String[] args)
+    {
+        A obj1=new A();
+        Thread t1=new Thread(obj1);
+        t1.start();
+        B obj2= new B();
+        Thread t2=new Thread(obj2);
+        t2.start();
+        C obj3=new C();
+        Thread t3=new Thread(obj3);
+        t3.start();
+        System.out.println("thread a is started");
+        //obj1.start();
+        System.out.println("thread b is started");
+        //obj2.start();
+        System.out.println("thread c is started");
+       // obj3.start();
+        t1.setPriority(1);
+        t2.setPriority(5);
+        t3.setPriority(10);
+        
+    }
+}
